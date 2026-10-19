@@ -105,7 +105,7 @@ def main():
         action, value = command_parts
 
         if action == "go":
-            if value not in rooms[current_room]:
+            if value not in ("north", "south", "east", "west") or value not in rooms[current_room]:
                 print("You cannot go that way.")
                 continue
 
